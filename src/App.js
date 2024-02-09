@@ -16,6 +16,9 @@ function App() {
      .then(res => {
       setCategories(res.data.trivia_categories);
      })
+     .catch(error => {
+      console.error(error);
+    });
   }, [])
 
   function decodeString(str) {
